@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+    <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="../../Style-Sheet/jemdoc.css" type="text/css" />
+    <title>template-blog</title>
+    </head>
+    <body>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-131436916-2");
+        pageTracker._trackPageview();
+    } catch(err) {}</script>
+    <table summary="Table for page layout." id="tlayout">
+    <tr valign="top">
+    <td id="layout-menu">
+    <div class="menu-category">Aymen Mahmoudi Blog</div><div class="menu-item"><a href="..\Aymen Mahmoudi Blog\index.html">Home</a></div><div class="menu-category">Computer</div><div class="menu-item"><a href="..\Computer\pc_hardware.html">Hardware</a></div><div class="menu-item"><a href="..\Computer\pc_linux.html" class="current">Linux</a></div><div class="menu-item"><a href="..\Computer\pc_zotero.html">Zotero</a></div><div class="menu-item"><a href="..\Computer\pc_inkscape.html">Inkscape</a></div><div class="menu-item"><a href="..\Computer\pc_latex.html">LaTeX</a></div><div class="menu-item"><a href="..\Computer\pc_gnuplot.html">Gnuplot</a></div><div class="menu-item"><a href="..\Computer\pc_gimp.html">GIMP</a></div><div class="menu-category">Photography</div><div class="menu-item"><a href="..\Photography\photo_sensors.html">Sensors</a></div><div class="menu-item"><a href="..\Photography\photo_Lenses.html">Lenses</a></div><div class="menu-item"><a href="..\Photography\photo_exposure.html">Exposure</a></div><div class="menu-item"><a href="..\Photography\photo_post-processing.html">Post-Processing</a></div><div class="menu-category">Music</div><div class="menu-item"><a href="..\Music\music_software.html">Music Software</a></div><div class="menu-item"><a href="..\Music\music_distribution.html">Music Distribution</a></div><div class="menu-item"><a href="..\Music\mix_mas.html">Mixing and Mastering</a></div><div class="menu-category">Extra</div><div class="menu-item"><a href="..\Extra\extra_quotes.html">Quotes</a></div><div class="menu-item"><a href="..\Extra\extra_movies.html">Movies</a></div><div class="menu-item"><a href="..\Extra\extra_riddles.html">Riddles</a></div><div class="menu-item"><a href="..\Extra\extra_people.html">Wonderful people</a></div>
+    <td id="layout-content">
+    <div id="toptitle">
+    <h1>Linux</h1>
+</div>
+
+<p>Linux is a powerful, open-source operating system known for its flexibility, security, and efficiency. It runs everything from servers to desktops and IoT devices, offering great control and customization. Whether you're a beginner, developer, or admin, mastering Linux commands lets you manage systems, automate tasks, and streamline workflows, making it a key skill in today's tech world.</p>
+
+<p>This guide introduces essential bash commands to unlock the Linux terminal's potential, covering file management, software installation, system monitoring, and more.</p>
+
+<h2>Core Linux Commands for Beginners</h2>
+<p>Below are fundamental Linux commands, grouped by category, with examples and tips to start using them confidently.</p>
+
+<h3>1. File and Directory Management</h3>
+<ul>
+    <li><b><code>ls</code></b>: Lists directory contents. Use <code>-l</code> for details or <code>-a</code> for hidden files. Example: <code>ls -lh</code> (human-readable sizes).</li>
+    <li><b><code>cd</code></b>: Changes directory. Use <code>..</code> to go up or <code>~</code> for home. Example: <code>cd /var/log</code>.</li>
+    <li><b><code>pwd</code></b>: Shows current directory. Example: <code>pwd</code>.</li>
+    <li><b><code>mkdir</code></b>: Creates directories. Use <code>-p</code> for nested ones. Example: <code>mkdir -p project/src</code>.</li>
+    <li><b><code>rm</code></b>: Deletes files or directories. Use <code>-r</code> for directories, <code>-i</code> for confirmation. Example: <code>rm -ri old_folder</code>. <b>Warning: <code>rm -rf</code> is permanent!</b></li>
+    <li><b><code>cp</code></b>: Copies files or directories. Use <code>-r</code> for directories. Example: <code>cp -v script.sh /backup</code>.</li>
+    <li><b><code>mv</code></b>: Moves or renames files/directories. Example: <code>mv file.txt renamed_file.txt</code>.</li>
+    <li><b><code>touch</code></b>: Creates empty files or updates timestamps. Example: <code>touch notes.txt</code>.</li>
+</ul>
+
+<h3>2. File Viewing and Editing</h3>
+<ul>
+    <li><b><code>cat</code></b>: Displays file contents. Example: <code>cat log.txt</code>.</li>
+    <li><b><code>nano</code></b>: Opens a text editor. Save with <code>Ctrl+O</code>, exit with <code>Ctrl+X</code>. Example: <code>nano config.txt</code>.</li>
+    <li><b><code>less</code></b>: Views files page by page. Press <code>q</code> to quit. Example: <code>less large_file.log</code>.</li>
+    <li><b><code>head</code></b>: Shows first 10 lines. Use <code>-n</code> for specific lines. Example: <code>head -n 5 data.csv</code>.</li>
+    <li><b><code>tail</code></b>: Shows last 10 lines. Use <code>-f</code> for real-time logs. Example: <code>tail -f /var/log/syslog</code>.</li>
+    <li><b><code>grep</code></b>: Searches text in files. Use <code>-i</code> for case-insensitive. Example: <code>grep -i "error" log.txt</code>.</li>
+</ul>
+
+<h3>3. System Monitoring</h3>
+<ul>
+    <li><b><code>top</code></b>: Shows real-time processes. Press <code>q</code> to exit. Example: <code>top</code>.</li>
+    <li><b><code>htop</code></b>: User-friendly process viewer (install with <code>sudo apt install htop</code>). Example: <code>htop</code>.</li>
+    <li><b><code>df</code></b>: Shows disk usage. Use <code>-h</code> for readable format. Example: <code>df -h</code>.</li>
+    <li><b><code>du</code></b>: Shows file/directory sizes. Use <code>-sh</code> for summary. Example: <code>du -sh /home/user/*</code>.</li>
+    <li><b><code>free</code></b>: Shows memory usage. Example: <code>free -h</code>.</li>
+    <li><b><code>ps</code></b>: Lists processes. Example: <code>ps aux</code> (all processes).</li>
+</ul>
+
+<h3>4. Package Management</h3>
+<ul>
+    <li><b><code>apt</code></b>: Manages Debian/Ubuntu packages. Example: <code>sudo apt update</code> (updates lists).</li>
+    <li><b><code>yum</code></b>: Manages Red Hat/CentOS packages. Example: <code>sudo yum install package_name</code>.</li>
+    <li><b><code>dnf</code></b>: Manages Fedora packages. Example: <code>sudo dnf install package_name</code>.</li>
+    <li><b><code>pacman</code></b>: Manages Arch Linux packages. Example: <code>sudo pacman -S package_name</code>.</li>
+</ul>
+
+<h3>5. User Management</h3>
+<ul>
+    <li><b><code>whoami</code></b>: Shows current user. Example: <code>whoami</code>.</li>
+    <li><b><code>id</code></b>: Shows user/group IDs. Example: <code>id username</code>.</li>
+    <li><b><code>adduser</code></b>: Adds a new user. Example: <code>sudo adduser newuser</code>.</li>
+    <li><b><code>passwd</code></b>: Changes passwords. Example: <code>passwd</code> (current user).</li>
+    <li><b><code>sudo</code></b>: Runs commands as root. Example: <code>sudo !!</code> (reruns last command).</li>
+</ul>
+
+<h3>6. File and System Utilities</h3>
+<ul>
+    <li><b><code>find</code></b>: Searches for files. Example: <code>find / -name "*.txt"</code>.</li>
+    <li><b><code>tar</code></b>: Archives files. Example: <code>tar -cvf archive.tar folder</code> (create).</li>
+    <li><b><code>wget</code></b>: Downloads files. Example: <code>wget https://example.com/file.zip</code>.</li>
+    <li><b><code>man</code></b>: Shows command manuals. Example: <code>man ls</code>.</li>
+    <li><b><code>chmod</code></b>: Changes file permissions. Example: <code>chmod 755 script.sh</code>.</li>
+</ul>
+
+<h3>Troubleshooting Common Issues</h3>
+<p>Encounter an error? Try these fixes:</p>
+<ul>
+    <li><b>"Permission denied"</b>: Add <code>sudo</code> (e.g., <code>sudo apt update</code>) or check permissions with <code>ls -l</code>.</li>
+    <li><b>"Command not found"</b>: Install the tool (e.g., <code>sudo apt install htop</code>) or verify spelling.</li>
+    <li><b>"No space left on device"</b>: Check disk usage with <code>df -h</code> and free space with <code>rm</code> or <code>du -sh *</code>.</li>
+</ul>
+
+<h2>Understanding Linux Distributions</h2>
+<p>A Linux distribution ("distro") is an operating system built around the Linux kernel, bundled with software, package managers, and interfaces tailored to specific needs. Distros support the commands above but vary in ease of use, updates, and purpose.</p>
+
+<h3>Why Distros Matter</h3>
+<p>Distros define your Linux experience, from installation to available tools. They fall into two categories: <b>main distros</b> (independent, foundational systems like Debian or Red Hat) and <b>sub-distros</b> (derivatives like Ubuntu, built on main distros with customized features). Your choice depends on goals like ease, stability, or customization.</p>
+
+<h3>Popular Distributions for Beginners</h3>
+<p>Below are key main and sub-distros, with examples of their use with the commands above.</p>
+
+<h4>Main Distributions</h4>
+<ul>
+    <li><b>Debian</b>: Stable and versatile, uses <code>apt</code>. Ideal for servers and users prioritizing reliability. Example: Monitor disk usage with <code>df -h</code>.</li>
+    <li><b>Red Hat Enterprise Linux (RHEL)</b>: Enterprise-focused, uses <code>yum</code> or <code>dnf</code>. Best for commercial servers, with community derivatives like CentOS. Example: Install packages with <code>sudo dnf install vim</code>.</li>
+    <li><b>Fedora</b>: Cutting-edge, uses <code>dnf</code>. Suits developers and enthusiasts with frequent updates. Example: Install software with <code>sudo dnf install gimp</code>.</li>
+    <li><b>Arch Linux</b>: Highly customizable, uses <code>pacman</code>. For advanced users wanting full control. Example: Install packages with <code>sudo pacman -S vim</code>.</li>
+</ul>
+
+<h4>Sub-Distributions</h4>
+<ul>
+    <li><b>Ubuntu</b>: Based on Debian, uses <code>apt</code>. User-friendly and widely supported, ideal for beginners and desktops. Example: Install software with <code>sudo apt install firefox</code>.</li>
+    <li><b>Linux Mint</b>: Based on Ubuntu/Debian, uses <code>apt</code>. Windows-like interface, perfect for newcomers. Example: Update system with <code>sudo apt update</code>.</li>
+    <li><b>Zorin OS</b>: Based on Ubuntu/Debian, uses <code>apt</code>. Beginner-friendly, great for low-spec PCs. Example: Install apps with <code>sudo apt install libreoffice</code>.</li>
+    <li><b>Pop!_OS</b>: Based on Ubuntu/Debian, uses <code>apt</code>. Gaming and development-focused with streamlined workflows. Example: Install gaming tools with <code>sudo apt install steam</code>.</li>
+    <li><b>CentOS Stream</b>: Based on RHEL, uses <code>dnf</code>. Rolling-release server distro for testing and development. Example: Update system with <code>sudo dnf update</code>.</li>
+</ul>
+
+<h3>Distro Comparison</h3>
+<p>Compare distros based on these criteria:</p>
+<ul>
+    <li><b>Ease of Use</b>: Beginner, intermediate, or advanced.</li>
+    <li><b>Package Manager</b>: Tool for software management.</li>
+    <li><b>Best For</b>: Ideal use cases (e.g., desktops, servers).</li>
+    <li><b>Parent Distro</b>: Main distro (or "Independent" for main distros).</li>
+    <li><b>Update Frequency</b>: Fixed (every 6-24 months) or rolling (continuous).</li>
+    <li><b>Desktop Environment</b>: Default interface (affects look and feel).</li>
+    <li><b>System Requirements</b>: Hardware needs (low: old PCs; high: modern systems).</li>
+    <li><b>Community Support</b>: Strength of forums/documentation.</li>
+</ul>
+<table>
+    <tr><th>Distro</th><th>Ease of Use</th><th>Package Manager</th><th>Best For</th><th>Parent Distro</th><th>Update Frequency</th><th>Desktop Environment</th><th>System Requirements</th><th>Community Support</th></tr>
+    <tr><td>Debian</td><td>Medium</td><td><code>apt</code></td><td>Servers, stability</td><td>Independent</td><td>Fixed (2 yrs)</td><td>GNOME/KDE/XFCE</td><td>Low-Mod.</td><td>Strong</td></tr>
+    <tr><td>RHEL</td><td>Medium</td><td><code>dnf/yum</code></td><td>Enterprise servers</td><td>Independent</td><td>Fixed (5+ yrs)</td><td>GNOME</td><td>Mod.-High</td><td>Commercial</td></tr>
+    <tr><td>Fedora</td><td>Medium</td><td><code>dnf</code></td><td>Developers, desktops</td><td>Independent</td><td>Fixed (6 mo.)</td><td>GNOME</td><td>Mod.-High</td><td>Strong</td></tr>
+    <tr><td>Arch Linux</td><td>Advanced</td><td><code>pacman</code></td><td>Custom systems</td><td>Independent</td><td>Rolling</td><td>None (user choice)</td><td>Low-High</td><td>Strong</td></tr>
+    <tr><td>Ubuntu</td><td>High</td><td><code>apt</code></td><td>Beginners, desktops</td><td>Debian</td><td>Fixed (6 mo.)</td><td>GNOME</td><td>Mod.</td><td>Excellent</td></tr>
+    <tr><td>Linux Mint</td><td>High</td><td><code>apt</code></td><td>Windows users, ease</td><td>Ubuntu/Debian</td><td>Fixed (6 mo.)</td><td>Cinnamon</td><td>Low-Mod.</td><td>Excellent</td></tr>
+    <tr><td>Zorin OS</td><td>High</td><td><code>apt</code></td><td>Low-spec PCs, ease</td><td>Ubuntu/Debian</td><td>Fixed (6 mo.)</td><td>GNOME</td><td>Low</td><td>Good</td></tr>
+    <tr><td>Pop!_OS</td><td>High</td><td><code>apt</code></td><td>Gaming, development</td><td>Ubuntu/Debian</td><td>Fixed (6 mo.)</td><td>COSMIC/GNOME</td><td>Mod.-High</td><td>Good</td></tr>
+    <tr><td>CentOS Stream</td><td>Medium</td><td><code>dnf</code></td><td>Servers, testing</td><td>RHEL</td><td>Rolling</td><td>GNOME</td><td>Mod.</td><td>Strong</td></tr>
+</table>
+
+<h3>Choosing a Distro</h3>
+<p>For beginners, sub-distros like Ubuntu, Linux Mint, or Zorin OS offer ease and support, built on Debian's stable base. For servers, main distros like Debian or RHEL (via CentOS Stream) prioritize reliability. Fedora suits modern desktops, while Arch Linux is for advanced customization. Consider your hardware (e.g., Zorin OS for old PCs) and update preference (fixed for stability, rolling for cutting-edge). Test distros via live USB before installing.</p>
+
+<h3>Tips for Distros</h3>
+<ul>
+    <li>Learn your distro's package manager (e.g., <code>apt</code> for Ubuntu, <code>dnf</code> for CentOS).</li>
+    <li>Use community forums (e.g., Ubuntu Forums, Arch Wiki) for help.</li>
+    <li>Choose a desktop environment (e.g., GNOME, Cinnamon) that suits your workflow.</li>
+    <li>Update regularly (e.g., <code>sudo apt update</code>) for security.</li>
+</ul>
+
+<h2>Quick-Reference Command Table</h2>
+<table>
+    <tr><th>Command</th><th>Purpose</th><th>Example</th></tr>
+    <tr><td><code>ls</code></td><td>List directory contents</td><td><code>ls -lh</code></td></tr>
+    <tr><td><code>cd</code></td><td>Change directory</td><td><code>cd /var/log</code></td></tr>
+    <tr><td><code>cat</code></td><td>Show file contents</td><td><code>cat log.txt</code></td></tr>
+    <tr><td><code>nano</code></td><td>Edit text files</td><td><code>nano config.txt</code></td></tr>
+    <tr><td><code>top</code></td><td>Monitor processes</td><td><code>top</code></td></tr>
+    <tr><td><code>apt</code></td><td>Manage packages</td><td><code>sudo apt update</code></td></tr>
+    <tr><td><code>whoami</მოდ</td><td>Show current user</td><td><code>whoami</code></td></tr>
+    <tr><td><code>id</code></td><td>Show user/group IDs</td><td><code>id username</code></td></tr>
+    <tr><td><code>adduser</code></td><td>Add a new user</td><td><code>sudo adduser newuser</code></td></tr>
+    <tr><td><code>passwd</code></td><td>Change passwords</td><td><code>passwd</code> (current user).</td></tr>
+    <tr><td><code>sudo</code></td><td>Run commands as root</td><td><code>sudo !!</code> (reruns last command).</td></tr>
+    <tr><td><code>find</code></td><td>Search files</td><td><code>find / -name "*.txt"</code></td></tr>
+</table>
+
+<h2>Practical Workflow Example</h2>
+<p>Practice these steps on any distro (install <code>nano</code> if needed, e.g., <code>sudo apt install nano</code>):</p>
+<ol>
+    <li>Create a directory: <code>mkdir my_project</code> (makes a new folder).</li>
+    <li>Navigate to it: <code>cd my_project</code> (enters the folder).</li>
+    <li>Create a file: <code>touch script.sh</code> (creates an empty script).</li>
+    <li>Edit the file: <code>nano script.sh</code> (add <code>echo "Hello, Linux!"</code>).</li>
+    <li>Make executable: <code>chmod +x script.sh</code> (allows running the script).</li>
+    <li>Run it: <code>./script.sh</code> (executes the script).</li>
+    <li>Check disk usage: <code>du -sh .</code> (shows folder size).</li>
+    <li>Back up file: <code>cp script.sh script_backup.sh</code> (creates a copy).</li>
+    <li>Remove directory (after <code>cd ..</code>): <code>rm -r my_project</code> (deletes folder).</li>
+</ol>
+
+<h2>Conclusion</h2>
+<p>Linux empowers you with its terminal commands and diverse distros. Mastering these basics and picking the right main or sub-distro unlocks endless possibilities for managing systems and workflows. Keep exploring to build your skills!</p>
+
+<h3>Next Steps</h3>
+<ul>
+    <li>Read command manuals: <code>man ls</code> or <code>command --help</code>.</li>
+    <li>Join forums like Ubuntu Forums or Reddit's r/linux.</li>
+    <li>Test distros with a live USB to find your favorite.</li>
+    <li>Try tutorials on sites like LinuxJourney or The Linux Foundation.</li>
+</ul>
+    </body>
+    </html>
+    
